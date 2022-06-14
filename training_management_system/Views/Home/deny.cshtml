@@ -1,0 +1,44 @@
+﻿
+@model IEnumerable<tms_lib.Training>
+
+
+<html>
+    <head>
+        <link rel="stylesheet" href="~/css/employee.css"/>
+        <link rel="stylesheet" href="~/fonticon/css/all.css" />
+    </head> 
+ 
+    <body>
+        
+       
+     <div class="grid">
+    @if (Model != null)
+{
+            foreach (var item in Model)
+            {
+                <div class="grid_content">
+                    <h4>@item.Title.ToUpper()</h4>
+                    <p>@item.CourseDescription</p>
+                    <hr/>
+                    <p typeof=date><span class="place">Start Date</span> :@item.Startdate</p>
+                    <p><span class="place">End Date</span> :@item.Enddate</p>
+                    <form method = "post">
+                        <label class="place">Enter Reason</label>
+                        <textarea type = "text" name = "denyReason" rows="3" cols="26" style="border-radius:10px;" placeholder = "Please enter "> </textarea>
+                        <input type = "submit" value = "Submit" class="btn  btn-default"/>
+                    </form>
+                </div>
+            }
+
+}
+</div>
+
+
+    </body>
+</html>
+
+
+@if(ViewBag.isDenyReasonUpdated > 0)
+{
+    <div class="alert alert-success" role="alert">Updated</div>
+}

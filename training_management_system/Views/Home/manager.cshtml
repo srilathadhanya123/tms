@@ -1,0 +1,40 @@
+﻿ @model IEnumerable<tms_lib.Manager>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="~/css/employee.css"/>
+        <link rel="stylesheet" href="~/fonticon/css/all.css" />
+        
+    </head>
+    <body>
+        <div class="div-button">
+        <a  href="add_new_manager" class="add_employee" >add Manager</a>
+        </div>
+
+        <div class="grid">
+             @foreach(var item in Model)
+             {
+                 <div class="grid_content">
+                    <div class="round_name">
+                  <div class="round-nav" >@item.Name.Substring(0,1).ToUpper()</div>
+                  <h4>@item.Name.ToUpper()</h4>
+                  </div>
+                 <hr />
+                 <p><span class="place">Id</span>  :@item.Id </p>
+                 <p><span class="place">Email ID</span>:@item.EmailId</p>
+                 @if(@item.Gender == true){ 
+                    <p><span class="place">Gender</span> :Male</p>
+                } else
+                {
+                    <p><span class="place">Gender</span> :Female</p>
+                }
+                <p><span class="place" >DOB</span> :@item.DateOfBirth</p>
+                 <p><span class="place">Phone no</span> :@item.PhoneNo</p>
+                 <p><span class="place">Hr Id</span> :@item.HrId</p>
+                 <a asp-action="sendMail"  asp-route-emailId =@item.EmailId   class="btn  btn-default">Reach Manager</a>
+                 </div>
+    }
+        </div>
+
+    </body>
+</html>

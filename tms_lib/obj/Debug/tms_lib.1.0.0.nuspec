@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>tms_lib</id>
+    <version>1.0.0</version>
+    <authors>tms_lib</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="EntityFramework" version="6.2.0" exclude="Build,Analyzers" />
+        <dependency id="MailKit" version="3.1.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.SqlServer" version="6.0.3" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\batch 215\training management system\training_management_system\tms_lib\bin\Debug\net6.0\tms_lib.dll" target="lib\net6.0\tms_lib.dll" />
+  </files>
+</package>

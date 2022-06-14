@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="training_management_systemModelStoreContainer" CdmEntityContainer="training_management_systemEntities">
+    <EntitySetMapping Name="employees">
+      <EntityTypeMapping TypeName="training_management_systemModel.employee">
+        <MappingFragment StoreEntitySet="employee">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="email_id" ColumnName="email_id" />
+          <ScalarProperty Name="C_password" ColumnName="_password" />
+          <ScalarProperty Name="C_name" ColumnName="_name" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="date_of_birth" ColumnName="date_of_birth" />
+          <ScalarProperty Name="phone_no" ColumnName="phone_no" />
+          <ScalarProperty Name="manager_id" ColumnName="manager_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hrs">
+      <EntityTypeMapping TypeName="training_management_systemModel.hr">
+        <MappingFragment StoreEntitySet="hr">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="email_id" ColumnName="email_id" />
+          <ScalarProperty Name="C_password" ColumnName="_password" />
+          <ScalarProperty Name="C_name" ColumnName="_name" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="date_of_birth" ColumnName="date_of_birth" />
+          <ScalarProperty Name="phone_no" ColumnName="phone_no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="managers">
+      <EntityTypeMapping TypeName="training_management_systemModel.manager">
+        <MappingFragment StoreEntitySet="manager">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="email_id" ColumnName="email_id" />
+          <ScalarProperty Name="C_password" ColumnName="_password" />
+          <ScalarProperty Name="C_name" ColumnName="_name" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="date_of_birth" ColumnName="date_of_birth" />
+          <ScalarProperty Name="phone_no" ColumnName="phone_no" />
+          <ScalarProperty Name="hr_id" ColumnName="hr_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="training_management_systemModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trainings">
+      <EntityTypeMapping TypeName="training_management_systemModel.training">
+        <MappingFragment StoreEntitySet="training">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="startdate" ColumnName="startdate" />
+          <ScalarProperty Name="enddate" ColumnName="enddate" />
+          <ScalarProperty Name="course_description" ColumnName="course_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="training_enrolled">
+      <EntityTypeMapping TypeName="training_management_systemModel.training_enrolled">
+        <MappingFragment StoreEntitySet="training_enrolled">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="training_id" ColumnName="training_id" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="feedback" ColumnName="feedback" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="training_requests">
+      <EntityTypeMapping TypeName="training_management_systemModel.training_requests">
+        <MappingFragment StoreEntitySet="training_requests">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="training_id" ColumnName="training_id" />
+          <ScalarProperty Name="Employee_email_id" ColumnName="Employee_email_id" />
+          <ScalarProperty Name="approval_status" ColumnName="approval_status" />
+          <ScalarProperty Name="rejection_reason" ColumnName="rejection_reason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,171 @@
+﻿
+.add_employee {
+    width: 10rem;
+    height: 3rem;
+    border-radius: 2rem;
+    background-color: #957dad;
+    color: wheat;
+    border: none;
+    box-shadow: -2px 3px wheat;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 6rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.div-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.grid_content {
+    background-color: #ffdfd3;
+    width: 6rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 16rem;
+    margin-top: 6rem;
+    margin-right: 4rem;
+    margin-left: 4rem;
+    padding: 24px 24px 20px 24px;
+    border-radius: 1rem;
+}
+
+
+.grid {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.place {
+    font-weight: bold;
+}
+
+.data {
+    padding-left: 1rem;
+}
+
+
+.add_page_heading {
+    color: #545454;
+    display: flex;
+    justify-content: center;
+    font-size: 6rem;
+}
+
+.add_form_body {
+    padding-left: 10rem;
+    margin: 4rem;
+}
+
+.add_label {
+    color: #545454;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.add_input {
+    width: 26rem;
+    height: 2.2rem;
+    border-radius: 6px;
+    border: 2px solid #B3B3B3;
+}
+
+.add_drop_down {
+    width: 26rem;
+    height: 2.5rem;
+    background-color: #BFC9EC;
+    border-radius: 6px;
+    font-weight: bold;
+    border: none;
+}
+
+.add_button {
+    margin-top: 2rem;
+    width: 9rem;
+    height: 3rem;
+    border-radius: 2rem;
+    background-color: #957dad;
+    color: #202020;
+    border: none;
+    box-shadow: -2px 3px #4F63A7;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.add_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    margin-top: 4rem;
+    font-size: 1.4rem;
+}
+
+.round-nav {
+    background-color: #957dad;
+    color: wheat;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    font-size: 1.6rem;
+}
+
+.round_name {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.status {
+    width: 745px;
+    height: 4rem;
+    background-color: purple;
+}
+
+.text {
+    color: purple;
+}
+
+.page-box {
+    width: 745px;
+    background-color: palevioletred;
+    padding: 20px 50px 15px;
+    border-radius: 6px;
+    color: rgb(29, 28, 28);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(255 213 164);
+    box-shadow: 1px 1px rgb(255 213 164);
+}
+
+.page-box-div {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-default {
+    background-color: #957dad;
+    color: wheat;
+}

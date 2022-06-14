@@ -1,0 +1,38 @@
+﻿
+@model IEnumerable<tms_lib.Employee>
+         
+<html>
+    <head>
+        <link rel="stylesheet" href="~/css/employee.css"/>
+        <link rel="stylesheet" href="~/fonticon/css/all.css" />
+        
+    </head>
+    <body>
+        <div class="grid">
+             @foreach(var item in Model)
+             {
+                 <div class="grid_content">
+                    <div class="round_name">
+                  <div class="round-nav" >@item.Name.Substring(0,1).ToUpper()</div>
+                  <h4>@item.Name.ToUpper()</h4>
+                  </div>
+                 <hr />
+                 <p><span class="place">Id</span>  :@item.Id </p>
+                 <p><span class="place">Email ID</span>:@item.EmailId</p>
+                 @if(@item.Gender == true){ 
+                    <p><span class="place">Gender</span> :Male</p>
+                } else
+                {
+                    <p><span class="place">Gender</span> :Female</p>
+                }
+                <p><span class="place" >DOB</span> :@item.DateOfBirth</p>
+                <p><span class="place">Manager Id</span> : @item.ManagerId</p>
+
+                 </div>
+                 Context.Session.SetString("firstLName", @item.Name.Substring(0,1).ToUpper());
+    }
+        </div>
+
+    </body>
+</html>
+

@@ -1,0 +1,29 @@
+﻿@model tms_lib.Training
+
+
+    
+<html>
+    <head>
+        <link rel = "stylesheet" href="~/css/employee.css" />
+           </head>
+           <body>
+               <h1 class="page_heading">Add Courses</h1>
+         <form class="add_form_body" method="post">
+            <div class="add_form">
+             <label class="add_label">Title</label>
+             <input type="text" asp-for="Title" placeholder="Enter courses Title"  class="add_input" />
+            <label class="add_label">Start Date</label>
+            <input type="date"  required asp-for="Startdate" class="add_input" /> 
+            <label class="add_label">End Date</label> 
+            <input type="date" asp-for="Enddate" placeholder="Enter Password" class="add_input"/>
+            <label  class="add_label">Courses Description</label> 
+            <textarea type="text" required asp-for="CourseDescription" rows="5" cols="10" class="add_input"></textarea>
+            <input class="add_button" type="submit" value="submit"/>    
+           </div>
+          
+          
+        </form>
+        <p class="message">@ViewData["Message"]</p>
+     
+    </body>
+</html>

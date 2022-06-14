@@ -1,0 +1,59 @@
+﻿{
+   "CodeGenerationMode": 2,
+   "ContextClassName": "Training_Management_SystemContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": true,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": null,
+   "ProjectRootNamespace": "_training_management_system",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[employee]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[hr]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[manager]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[training]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[training_enrolled]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[training_requests]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "LAPTOP-V357IG6O\\SQLEXPRESS01.training_management_system",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoConstructor": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false
+}

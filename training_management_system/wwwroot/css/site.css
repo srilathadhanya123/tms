@@ -1,0 +1,23 @@
+
+.navbar-custom {
+    background-color: #ffdfd3;
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+    .navbar-custom:hover {
+        color: #4F63A7;
+    }
+
+.round-navb {
+    background-color: #957dad;
+    color: wheat;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    height: 34px;
+    width: 36px;
+    border-radius: 50%;
+    font-size: 1.3rem;
+}

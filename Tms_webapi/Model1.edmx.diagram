@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dca1d41cb5db497b82c91a3746673afb" Name="Diagram1">
+        <EntityTypeShape EntityType="training_management_systemModel.employee" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="training_management_systemModel.hr" Width="1.5" PointX="1.5" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="training_management_systemModel.manager" Width="1.5" PointX="1.5" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="training_management_systemModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="training_management_systemModel.training" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="training_management_systemModel.training_enrolled" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="training_management_systemModel.training_requests" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <AssociationConnector Association="training_management_systemModel.FK__employee__manage__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="training_management_systemModel.FK__training___emplo__07C12930" ManuallyRouted="false" />
+        <AssociationConnector Association="training_management_systemModel.FK__manager__hr_id__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="training_management_systemModel.FK__training___train__02FC7413" ManuallyRouted="false" />
+        <AssociationConnector Association="training_management_systemModel.FK__training___train__06CD04F7" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

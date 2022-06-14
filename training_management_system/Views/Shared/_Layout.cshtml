@@ -1,0 +1,44 @@
+﻿
+    @using Microsoft.AspNetCore.Http
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+     <nav  class="navbar navbar-custom ">
+    @Html.ActionLink("HOME","home","Home",null,new {@class="nav-link active navbar-custom"})
+     @*<a class="nav-link active navbar-custom" href="home">HOME</a>*@
+
+     @if(Context.Session.GetString("login_role") == "employee")
+     {
+         @Html.ActionLink("COURSES","courses","Home",null,new {@class="nav-link active navbar-custom"})
+         @*<a class="nav-link active navbar-custom" href="courses">COURSES</a>*@
+         @Html.ActionLink("MY COURSES","mycourses","Home",null,new {@class="nav-link active navbar-custom"})
+        @* <a class="nav-link active navbar-custom" action="mycourses">MY COURSES</a>*@
+     }  
+     else if(Context.Session.GetString("login_role") == "hr")
+      { 
+        @Html.ActionLink("COURSES","courses","Home",null,new {@class="nav-link active navbar-custom"}) 
+        @*<a class="nav-link active navbar-custom" href="courses">COURSES</a>*@
+        @Html.ActionLink("EMPLOYEE","employee","Home",null,new {@class="nav-link active navbar-custom"})
+        @*<a class="nav-link active navbar-custom" href="employee">EMPLOYEE</a>*@
+        @Html.ActionLink("MANAGER","manager","Home",null,new {@class="nav-link active navbar-custom"})
+        @*<a class="nav-link active navbar-custom" href="manager">MANAGER</a>*@
+      }else if(Context.Session.GetString("login_role") == "manager")
+      {
+        @Html.ActionLink("COURSES REQ","courses_req","Home",null,new {@class="nav-link active navbar-custom"})
+        @*<a class="nav-link active navbar-custom" href="courses_req">COURSES REQ</a>*@
+        @Html.ActionLink("MY EMPLOYEE","myemployee","Home",null,new {@class="nav-link active navbar-custom"})
+        @*<a class="nav-link active navbar-custom" href="myemployee">MY EMPLOYEE</a>*@
+      }
+        @Html.ActionLink("LOGOUT","logout","Home",null,new {@class="nav-link active navbar-custom"})
+        @*<a class="nav-link active navbar-custom" href="logout">LOGOUT</a>*@
+        <a class="round-navb" style="background-color:#957dad; color: wheat" href="viewProfile">@Context.Session.GetString("firstLName")</a>
+      </nav>
+      <article>@RenderBody()</article>
+
+</body>

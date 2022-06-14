@@ -1,0 +1,104 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = training_management_system
+build_property.RootNamespace = training_management_system
+build_property.ProjectDir = C:\batch 215\training management system\training_management_system\training_management_system\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\batch 215\training management system\training_management_system\training_management_system
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/batch 215/training management system/training_management_system/training_management_system/Views/Home/addFeedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxhZGRGZWVkYmFjay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/batch 215/training management system/training_management_system/training_management_system/Views/Home/add_new_courses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxhZGRfbmV3X2NvdXJzZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/batch 215/training management system/training_management_system/training_management_system/Views/Home/add_new_employee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxhZGRfbmV3X2VtcGxveWVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/batch 215/training management system/training_management_system/training_management_system/Views/Home/add_new_manager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxhZGRfbmV3X21hbmFnZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/batch 215/training management system/training_management_system/training_management_system/Views/Home/courses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjb3Vyc2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/batch 215/training management system/training_management_system/training_management_system/Views/Home/courses_req.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjb3Vyc2VzX3JlcS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/batch 215/training management system/training_management_system/training_management_system/Views/Home/deny.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxkZW55LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/batch 215/training management system/training_management_system/training_management_system/Views/Home/employee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxlbXBsb3llZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/batch 215/training management system/training_management_system/training_management_system/Views/Home/home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxob21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/batch 215/training management system/training_management_system/training_management_system/Views/Home/login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxsb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/batch 215/training management system/training_management_system/training_management_system/Views/Home/manager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxtYW5hZ2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/batch 215/training management system/training_management_system/training_management_system/Views/Home/manager_adddata.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxtYW5hZ2VyX2FkZGRhdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/batch 215/training management system/training_management_system/training_management_system/Views/Home/mycourses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxteWNvdXJzZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/batch 215/training management system/training_management_system/training_management_system/Views/Home/myemployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxteWVtcGxveWVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/batch 215/training management system/training_management_system/training_management_system/Views/Home/profileEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwcm9maWxlRW1wbG95ZWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/batch 215/training management system/training_management_system/training_management_system/Views/Home/profileHr.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwcm9maWxlSHIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/batch 215/training management system/training_management_system/training_management_system/Views/Home/profileManager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwcm9maWxlTWFuYWdlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/batch 215/training management system/training_management_system/training_management_system/Views/Home/sendMail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxzZW5kTWFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/batch 215/training management system/training_management_system/training_management_system/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/batch 215/training management system/training_management_system/training_management_system/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/batch 215/training management system/training_management_system/training_management_system/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/batch 215/training management system/training_management_system/training_management_system/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-bqrwayeiy3

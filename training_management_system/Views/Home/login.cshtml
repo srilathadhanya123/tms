@@ -1,0 +1,30 @@
+﻿   @{
+        Layout = null;
+    }
+
+
+    <html>
+        <head>
+             <link rel="stylesheet" href="~/css/Login.css" />
+        </head>
+        <body>
+            <h1 class="title">Login</h1>
+              <form method="post">
+                <div class="login_form">
+                    <label class="login_label">Email</label>
+                    <input required class="login_input" type="email" name="email" />
+                    <label class="login_label">Password</label>
+                    <input required class="login_input" type="password" name="password"/>
+                    <label class="login_label">Role</label>
+                    <select required class="login_drop_down" name="role">
+                        <option value="hr">HR</option>
+                        <option value="manager">Manager</option>
+                        <option value="employee">Employee</option>
+                    </select>
+                    <input class="login_button" type="submit" value="Login" />
+                </div>
+            </form> 
+            <p class="error_message">@ViewData["Message"]</p>
+      </body>
+
+    </html>

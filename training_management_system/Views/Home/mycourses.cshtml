@@ -1,0 +1,36 @@
+﻿
+<html>
+    <head>
+        <link rel="stylesheet" href="~/css/employee.css"/>
+        <link rel="stylesheet" href="~/fonticon/css/all.css" />
+    </head> 
+ 
+    <body>
+       
+     <div class="grid">
+    @if (Model != null)
+{
+    foreach (var item in Model)
+    {
+      <div class="grid_content">
+      <h4>@item.Title.ToUpper()</h4>
+      <p>@item.CourseDescription</p>
+      <hr/>
+      <p typeof=date><span class="place">Start Date</span> :@item.Startdate</p>
+      <p><span class="place">End Date</span> :@item.Enddate</p>
+      <hr/>
+        @if(@item.Feedback == null)
+        {
+            <a asp-action="addFeedback"  asp-route-id=@item.Id  class="btn btn-default">Give Feedback</a>
+        }
+        
+        </div>
+
+    }
+
+}
+</div>
+
+
+    </body>
+</html>

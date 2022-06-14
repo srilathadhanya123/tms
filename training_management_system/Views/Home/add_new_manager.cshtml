@@ -1,0 +1,51 @@
+﻿@model tms_lib.Manager
+
+    
+<html>
+    <head>
+        <link rel = "stylesheet" href="~/css/employee.css" />
+           </head>
+           <body>
+               <h1 class="page_heading">Add Manager</h1>
+        <form class="add_form_body" method="post">
+           
+            <div class="add_form">
+             <label class="add_label">Name</label>
+             <input type="text" asp-for="Name" placeholder="Enter Name"  class="add_input" />
+              <span asp-validation-for=Name></span>
+            <label class="add_label">Enter Email</label>
+            <input type="email"  required asp-for="EmailId" placeholder="john@gmail.com" class="add_input" />
+            <span>@ViewBag.isEmailExistError</span>
+             <span asp-validation-for=EmailId></span> 
+            <label class="add_label">Password</label>
+            <input type="password" asp-for="Password" placeholder="Enter Password" class="add_input"/>
+            <span asp-validation-for=Password></span>
+            <label class="add_label">Enter gender</label>
+            <select required asp-for="Gender" class="add_drop_down" >
+                 <option  value=true>Female</option>
+                 <option  value=false>Male</option>
+            </select>
+            <label  class="add_label">Enter dob</label>
+            <input type="date" required asp-for="DateOfBirth" class="add_input"/>
+            <label  class="add_label">Enter phone</label>
+            <input  type="tel" required asp-for="PhoneNo" class="add_input"/>
+            <span asp-validation-for=PhoneNo></span>
+            <label  class="add_label">Enter Hrid</label>
+            <select asp-for="HrId" required class="add_drop_down">
+                 @foreach(var item in ViewBag.hrId){ 
+                 <option required value="@item">@item</option>
+                 }
+                 </select>
+                <input />
+            <div>
+            <input class="add_button" type="submit" value="submit"/>
+            </div>
+
+            </div>
+           
+        </form>
+        <
+        <p class="message">@ViewData["Message"]</p>
+     
+    </body>
+</html>

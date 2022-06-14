@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="training_management_systemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="employee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="C_password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="C_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="Boolean" />
+    <Property Name="date_of_birth" Type="DateTime" Precision="0" />
+    <Property Name="phone_no" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="manager_id" Type="Int32" />
+    <NavigationProperty Name="manager" Relationship="Self.FK__employee__manage__3E52440B" FromRole="employee" ToRole="manager" />
+    <NavigationProperty Name="training_enrolled" Relationship="Self.FK__training___emplo__07C12930" FromRole="employee" ToRole="training_enrolled" />
+  </EntityType>
+  <EntityType Name="hr">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="C_password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="C_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="Boolean" />
+    <Property Name="date_of_birth" Type="DateTime" Precision="0" />
+    <Property Name="phone_no" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="managers" Relationship="Self.FK__manager__hr_id__3A81B327" FromRole="hr" ToRole="manager" />
+  </EntityType>
+  <EntityType Name="manager">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="C_password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="C_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="Boolean" />
+    <Property Name="date_of_birth" Type="DateTime" Precision="0" />
+    <Property Name="phone_no" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="hr_id" Type="Int32" />
+    <NavigationProperty Name="employees" Relationship="Self.FK__employee__manage__3E52440B" FromRole="manager" ToRole="employee" />
+    <NavigationProperty Name="hr" Relationship="Self.FK__manager__hr_id__3A81B327" FromRole="manager" ToRole="hr" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="training">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="startdate" Type="DateTime" Precision="0" />
+    <Property Name="enddate" Type="DateTime" Precision="0" />
+    <Property Name="course_description" Type="String" MaxLength="90" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="training_requests" Relationship="Self.FK__training___train__02FC7413" FromRole="training" ToRole="training_requests" />
+    <NavigationProperty Name="training_enrolled" Relationship="Self.FK__training___train__06CD04F7" FromRole="training" ToRole="training_enrolled" />
+  </EntityType>
+  <EntityType Name="training_enrolled">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="training_id" Type="Int32" />
+    <Property Name="employee_id" Type="Int32" />
+    <Property Name="feedback" Type="String" MaxLength="90" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="employee" Relationship="Self.FK__training___emplo__07C12930" FromRole="training_enrolled" ToRole="employee" />
+    <NavigationProperty Name="training" Relationship="Self.FK__training___train__06CD04F7" FromRole="training_enrolled" ToRole="training" />
+  </EntityType>
+  <EntityType Name="training_requests">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="training_id" Type="Int32" />
+    <Property Name="Employee_email_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="approval_status" Type="Boolean" />
+    <Property Name="rejection_reason" Type="String" MaxLength="90" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="training" Relationship="Self.FK__training___train__02FC7413" FromRole="training_requests" ToRole="training" />
+  </EntityType>
+  <Association Name="FK__employee__manage__3E52440B">
+    <End Role="manager" Type="Self.manager" Multiplicity="0..1" />
+    <End Role="employee" Type="Self.employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="manager">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="employee">
+        <PropertyRef Name="manager_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__training___emplo__07C12930">
+    <End Role="employee" Type="Self.employee" Multiplicity="0..1" />
+    <End Role="training_enrolled" Type="Self.training_enrolled" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="training_enrolled">
+        <PropertyRef Name="employee_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__manager__hr_id__3A81B327">
+    <End Role="hr" Type="Self.hr" Multiplicity="0..1" />
+    <End Role="manager" Type="Self.manager" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hr">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="manager">
+        <PropertyRef Name="hr_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__training___train__02FC7413">
+    <End Role="training" Type="Self.training" Multiplicity="0..1" />
+    <End Role="training_requests" Type="Self.training_requests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="training">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="training_requests">
+        <PropertyRef Name="training_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__training___train__06CD04F7">
+    <End Role="training" Type="Self.training" Multiplicity="0..1" />
+    <End Role="training_enrolled" Type="Self.training_enrolled" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="training">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="training_enrolled">
+        <PropertyRef Name="training_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="training_management_systemEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="employees" EntityType="Self.employee" />
+    <EntitySet Name="hrs" EntityType="Self.hr" />
+    <EntitySet Name="managers" EntityType="Self.manager" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="trainings" EntityType="Self.training" />
+    <EntitySet Name="training_enrolled" EntityType="Self.training_enrolled" />
+    <EntitySet Name="training_requests" EntityType="Self.training_requests" />
+    <AssociationSet Name="FK__employee__manage__3E52440B" Association="Self.FK__employee__manage__3E52440B">
+      <End Role="manager" EntitySet="managers" />
+      <End Role="employee" EntitySet="employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__training___emplo__07C12930" Association="Self.FK__training___emplo__07C12930">
+      <End Role="employee" EntitySet="employees" />
+      <End Role="training_enrolled" EntitySet="training_enrolled" />
+    </AssociationSet>
+    <AssociationSet Name="FK__manager__hr_id__3A81B327" Association="Self.FK__manager__hr_id__3A81B327">
+      <End Role="hr" EntitySet="hrs" />
+      <End Role="manager" EntitySet="managers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__training___train__02FC7413" Association="Self.FK__training___train__02FC7413">
+      <End Role="training" EntitySet="trainings" />
+      <End Role="training_requests" EntitySet="training_requests" />
+    </AssociationSet>
+    <AssociationSet Name="FK__training___train__06CD04F7" Association="Self.FK__training___train__06CD04F7">
+      <End Role="training" EntitySet="trainings" />
+      <End Role="training_enrolled" EntitySet="training_enrolled" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

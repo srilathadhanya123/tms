@@ -1,0 +1,49 @@
+﻿@model IEnumerable<tms_lib.Training>
+@using Microsoft.AspNetCore.Http
+
+<html>
+    <head>
+        <link rel="stylesheet" href="~/css/employee.css"/>
+        <link rel="stylesheet" href="~/fonticon/css/all.css" />
+    </head> 
+ 
+    <body>
+        <div class="div-button">
+            @if(Context.Session.GetString("login_role") == "hr"){
+                <a  href="add_new_courses" class="add_employee" >add Courses</a>
+            }
+        </div>
+
+                     @if(ViewBag.isRequested == 1)
+                    {
+                      <div class="alert alert-success" role="alert"> Added</div>
+                    }else if(ViewBag.isRequested == 0)
+                    {
+                        <div class="alert alert-danger" role="alert">Already Added</div>
+                    }else if(ViewBag.isRequested == 4){
+                        <div class="alert alert-danger" role="alert" > date</div>
+                    }
+        
+        <div class="grid">
+             @foreach(var item in Model)
+             {
+
+                 <div class="grid_content">
+                     <h4>@item.Title.ToUpper()</h4>
+                     <p>@item.CourseDescription</p>
+                     <hr/>
+                <p typeof=date><span class="place">Start Date</span> :@item.Startdate</p>
+                <p><span class="place">End Date</span> :@item.Enddate</p>
+                @if (Context.Session.GetString("login_role") == "employee")
+                {
+                    <a asp-action="applyCourses"  asp-route-id=@item.Id  asp-route-startDate =@item.Startdate asp-route-endDate =@item.Enddate  class="btn  btn-default">Apply</a>
+                }
+            </div>
+    } 
+
+
+        </div>
+
+    </body>
+</html>
+</html>

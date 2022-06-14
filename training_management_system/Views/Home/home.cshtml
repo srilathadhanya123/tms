@@ -1,0 +1,27 @@
+﻿
+@using Microsoft.AspNetCore.Http
+<html>
+    <head>
+        <link rel="stylesheet" href="~/css/employee.css"/>
+        <link rel="stylesheet" href="~/fonticon/css/all.css" />
+        
+    </head>
+    <body>
+         @if(Context.Session.GetString("login_role") == "hr"){
+         <div class="grid">
+        <div class="grid_content">
+        <h1>Employee</h1>
+        <h2>@ViewBag.countOfEmp</h2>
+        </div>
+        <div style="background-color:#957dad; color: wheat;" class="grid_content">
+        <h1> Managers</h1>
+        <h2>@ViewBag.countOfManager</h2>
+        </div>
+        <div class="grid_content">
+        <h1>Courses</h1>
+        <h2>@ViewBag.countOfCourses</h2>
+        </div>
+        </div>
+         }
+    </body>
+</html>

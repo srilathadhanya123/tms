@@ -1,0 +1,43 @@
+﻿  @model tms_lib.Manager
+
+
+<form method="post">
+    <label>Enter Email</label>
+  <input type="email"  asp-for="EmailId" class="form-control" />
+  @*<span asp-validation-for=Username></span> <br />  @*area where validation message will be displayed*@
+
+
+
+    <label>Enter  password</label>
+ <input type="text" asp-for="Password" class="form-control"/> <br />
+ @*<span asp-validation-for=Pwd></span><br />*@
+
+
+
+    <label>Enter name</label>
+ <input type="text" asp-for="Name" class="form-control" /><br />
+
+
+    <label>Enter gender</label>
+ 
+ <input type="radio" asp-for="Gender"value="true"  class="form-control"/>
+ <input type="radio" asp-for="Gender " value="false" class="form-control"/><br />
+
+
+ @* <span asp-validation-for=Email></span> <br />*@
+
+    
+ 
+    <label>Enter dob</label>
+   <input type="date" asp-for="DateOfBirth"class="form-control"/><br />
+
+    <label>Enter phone</label>
+      <input type="tel" asp-for="PhoneNo" class="form-control"/><br />
+
+      <label>Enter hrid</label>
+        <input type="text" asp-for="HrId "class="form-control"/><br/ > 
+
+        <input type="submit" value="submit"/>
+        </form>
+
+@ViewData["Message"]

@@ -1,0 +1,35 @@
+﻿
+<html>
+    <head>
+        <link rel="stylesheet" href="~/css/employee.css"/>
+        <link rel="stylesheet" href="~/fonticon/css/all.css" />
+    </head> 
+ 
+    <body>
+   @if(ViewBag.isApproved > 0)
+   {
+    <div class="alert alert-success" role="alert">Approved</div>
+   }
+
+        <div class="grid">
+        @foreach (var item in Model)
+    {
+         <div class="grid_content">
+            <h4>@item.Title.ToUpper()</h4>
+            <hr/>
+            <p typeof=date><span class="place">Start Date</span> :@item.Startdate</p>
+            <p><span class="place">End Date</span> :@item.Enddate</p>
+            <hr/>
+            <p><span class="place">Req By</span> :@item.Name</p>
+            <p><span class="place">Emp Eamil id</span> :@item.EmailId</p>
+            <hr/>
+            <a asp-action="request_approval"  asp-route-TrainingId=@item.TrainingId asp-route-EmpId=@item.Id asp-route-EmailId=@item.EmailId class="btn btn-default">Approve</a>
+            <br>
+            <a asp-action="deny"  asp-route-TrainingId=@item.TrainingId asp-route-EmailId=@item.EmailId class="btn btn-default">Deny</a>
+            </div>
+        }
+      
+        </div>
+
+    </body>
+</html>
